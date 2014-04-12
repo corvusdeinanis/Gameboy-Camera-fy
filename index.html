@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body> 
+
+        <div id="gboy-description">
+
+            <p>
+                <strong>Requirements: </strong>At this time only the Chrome browser is supported.
+            </p>   
+
+            <p>
+                <strong>Tech: </strong>This is a Gameboy Camera emulator from <a href="http://joeydehnert.com/">Joey Dehnert</a> made with HTML5 and javascript. It uses the getUserMedia() method to stream video from your computer's webcam then renders to a video element, which then gets drawn onto a corresponding canvas element where the 4 monochromatic gameboy color filters are applied. When a photo is taken the video redraw is stopped and the chosen frame is then processed and drawn onto a hidden canvas element and given a Gameboy frame and output to a base64 encoded image. When the images are shared the output image is automattically uploaded to IMGUR using their upload api. Example output image: <a href="http://i.imgur.com/0zNmjEv.png" target="_blank">http://i.imgur.com/0zNmjEv.png</a>
+            <p>
+
+            <p>
+                <strong>Code: </strong>
+            </p>
+
+        </div> 
+
+        <div id="gboy-social">
+
+            <p>@joeydehnert</p>
+            <a href="https://twitter.com/joeydehnert" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @joeydehnert</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+        </div>
+
+        <div id="gboy-controls">
+            <a class="btn-take button">TAKE PHOTO</a>
+            <a class="btn-restart button">RESTART VIDEO</a>
+
+            <div id="social-container">
+                <p>Share your photo!</p>
+                <a class="button btn-tweet" data-network="twitter">TWITTER</a>
+                <a class="button btn-fb" data-network="facebook">FACEBOOK</a>
+                <a class="button btn-imgur" data-network="facebook">IMGUR</a>
+            </div>
+
+            <div id="processing-container">Working...</div>
+
+        </div>
+
+        <video autoplay></video>
+
+        <div id="gboy-container">
+            <div id="gboy-screen-container">
+                <canvas id="gboy-screen" width="640" height="480"></canvas>
+            </div>
+            <canvas id="gboy-image" width="785" height="785"></canvas>
+        </div>
+
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
